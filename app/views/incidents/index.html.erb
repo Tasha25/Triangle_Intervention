@@ -1,0 +1,12 @@
+<h1> This page shows all <%= "#{@student.first_name}" %>'s incidents </h1>
+
+
+The student had this previous incidents:
+<ul>
+
+<% @incidents.each do |incident| %>
+  <li>
+      <%= incident %>
+
+<% end %>
+</ul>

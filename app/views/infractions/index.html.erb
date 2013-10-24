@@ -1,0 +1,13 @@
+
+<%= "#{@student.first_name}" %>
+
+
+The student <%= "#{@student_id}" %> has:
+<ul>
+
+<% @infractions.each do |infraction| %>
+  <li>
+      <%= infraction %>
+
+<% end %>
+</ul>

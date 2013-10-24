@@ -1,0 +1,14 @@
+<div>
+
+<%= form_for([@user, @student, @infraction]) do |f| %>
+  <%= f.hidden_field :user_id, @user.id %>
+  <%= f.hidden_field :student_id, @student.id %>
+  <%= f.label :code %>
+  <%= f.text_field :code %><br>
+  <%= f.label :description %>
+  <%= f.text_field :description %><br>
+
+
+  <%= f.submit %>
+<% end %>
+</div>

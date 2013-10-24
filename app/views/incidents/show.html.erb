@@ -1,0 +1,38 @@
+
+</br>
+The student <%= "#{@student.first_name}" %> commited a:
+
+<%= @incident.infraction.code %>
+
+which is
+<%= @incident.infraction.description %>
+<div>
+
+<ul>
+<li> Dean's comment: <%= @incident.comment.capitalize %> </li>
+
+This incident was created: <%= @incident.created_at.strftime("%d %b. %Y") %>
+</ul>
+
+
+</div>
+
+</br>
+
+The resources that you can use to help <%= "#{@student.first_name}" %> are: </br>
+
+<div>
+<% @connectors.each do |connector| %>
+<ul>
+  <li><%= connector.organization_name  %></li>
+  <li> <%= connector.organization_mission %></li>
+<ul>
+<%end  %>
+
+</div>
+
+
+
+
+
+

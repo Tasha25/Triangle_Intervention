@@ -1,0 +1,5 @@
+rails generate migration AddPartNumberToProducts part_number:string
+rails generate migration AddCreateConnectorsTable part_number:string
+
+
+rails generate migration AddUser

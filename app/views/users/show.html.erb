@@ -1,0 +1,25 @@
+</br>
+Hi <%= @user.first_name %> what would you like to do?
+
+<div>
+<ul class="user-choices">
+  <li>
+    <%= link_to "Create a student", new_user_student_path(@user) %>
+ </li>
+</ul>
+</div>
+
+</br>
+</br>
+
+<h1> The Students </h1>
+<ul>
+<% @students.each do |student| %>
+  <li>
+      <%= link_to student.first_name, user_student_path(@user, student ) %>
+  </li>
+<% end %>
+</ul>
+
+
+

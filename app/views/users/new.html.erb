@@ -1,0 +1,43 @@
+<% if @user.errors.any? %>
+<ul>
+  <% @user.errors.messages.each do |error, msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<div id="Part1">
+</br></br></br><h1> Did you sign up already? Sign in below </h1>
+<%= flash[:notice] %>
+
+<h1>Login</h1>
+<%= form_tag('/login') do %>
+  <%= label_tag :email %>
+  <%= text_field_tag :email %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Login" %>
+<% end %>
+</div></br></br>
+
+<div id="Part2">
+<h1> Do you need to register? Register below </h1>
+
+<%= form_for(@user) do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %><br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %><br>
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br>
+  <%= f.submit "Sign Up" %>
+<% end %>
+</div>
+
+
+
