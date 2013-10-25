@@ -16,7 +16,7 @@
     <h1> Pick a student to add an infraction to their profile:</h1>
 
       <% @students.each do |student| %>
-        <%= link_to student.first_name, user_student_path(@user, student ) %>
+        <%= link_to student.first_name , user_student_path(@user, student ) %>
       <% end %>
   </div>
 </div>
