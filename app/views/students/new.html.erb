@@ -1,27 +1,30 @@
 
+<h1> Add student </h1>
 
-<h1> Do you need to add student? Please do it below </h1>
+<div class="signup">
 
-<div>
-  <h1> Add student </h1>
   <%= form_for [@user, @student] do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %><br>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %><br>
-  <%= f.label :osis %>
-  <%= f.text_field :osis %><br>
-  <%= f.label :address %>
-  <%= f.text_field  :address %><br>
+  <%= f.label :first_name %></br>
+  <%= f.text_field :first_name %></br></br>
+  <%= f.label :last_name %> </br>
+  <%= f.text_field :last_name %></br></br>
+  <%= f.label :osis %></br>
+  <%= f.text_field :osis %></br></br>
+  <%= f.label :address %></br>
+  <%= f.text_field  :address %></br></br>
 
-  <%= f.label :date_of_birth %>
-  <%= f.text_field  :date_of_birth %><br>
-  <%= f.label :guardians_name %>
-  <%= f.text_field :guardians_name %><br>
- <%= f.label :phone_number %>
-  <%= f.phone_field :phone_number %><br>
+  <%= f.label :date_of_birth %></br>
+  <%= f.text_field  :date_of_birth %></br></br>
+  <%= f.label :guardians_name %></br>
+  <%= f.text_field :guardians_name %></br></br>
+ <%= f.label :phone_number %></br>
+  <%= f.phone_field :phone_number %></br></br>
 <%= f.hidden_field :user_id, :value => @user.id %>
 
   <%= f.submit%>
 <% end %>
 </div>
+
+<!-- <div class="logo">
+    <img src="/assets/logo_sfcbc.png" height="500" width="500" />
+  </div> -->

@@ -1,25 +1,32 @@
-</br>
-Hi <%= @user.first_name %> what would you like to do?
 
-<div>
-<ul class="user-choices">
-  <li>
-    <%= link_to "Create a student", new_user_student_path(@user) %>
- </li>
-</ul>
+  <p> Hi <%= @user.first_name %> what would you like to do? </p>
+
+  <div class="container2">
+  <div class="student">
+    <h1> Add a Student </h1>
+    <ul>
+      <li>
+        <%= link_to "Click here", new_user_student_path(@user) %>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="find">
+  <h1> Find a student to add an infraction:</h1>
+  <ul>
+    <% @students.each do |student| %>
+    <li>
+      <%= link_to student.first_name, user_student_path(@user, student ) %>
+    </li>
+    <% end %>
+  </ul>
+</div>
 </div>
 
-</br>
-</br>
-
-<h1> The Students </h1>
-<ul>
-<% @students.each do |student| %>
-  <li>
-      <%= link_to student.first_name, user_student_path(@user, student ) %>
-  </li>
-<% end %>
-</ul>
+  <div class="logo">
+    <img src="/assets/logo_sfcbc.png" height="500" width="500" />
+  </div>
 
 
 
