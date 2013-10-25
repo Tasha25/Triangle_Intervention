@@ -1,19 +1,20 @@
-<div class="resources-info">
-  <p>The student <%= "#{@student.first_name}" %> commited a:
-    <%= @incident.infraction.code %>
-    which is <%= @incident.infraction.description %></p>
+<div class="container">
+  <p><b>Student:</b> <%= "#{@student.first_name} #{@student.last_name}" %></br>
+   <p><b>Commited a: </b> <%= @incident.infraction.code %></p></br>
+    <p><b>Description: </b><%= @incident.infraction.description %></p>
   <div>
     <h2>Dean's comment:</h2>
     <p><%= @incident.comment.capitalize %></p>
-    <small>This incident was created: <%= @incident.created_at.strftime("%d %b. %Y") %></small>
+    <h2>Incident created:</h2>
+    <p><%= @incident.created_at.strftime("%d %b. %Y") %></p>
   </div>
   <hr>
   <div>
-    <h2>The resources that you can use to help <%= "#{@student.first_name}" %> are: </br></h2>
+    <p><b>The resources that you can use to help <%= "#{@student.first_name}" %> are: </b></br></p>
     <ul>
     <% @connectors.each do |connector| %>
       <li>
-        <h3><%= connector.organization_name  %></h3>
+        <h2><%= connector.organization_name  %></h2>
         <p><%= connector.organization_mission %></p>
       </li>
     <% end %>
@@ -21,7 +22,3 @@
   </div>
 
 </div>
-
-
-
-

@@ -6,22 +6,29 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
 
 <div class= "header">
   <h1> Family, School, and the Connectors   </h1>
-  <h4> Changing the pipeline to a triangle! </h4>
+  <h4><em> Changing the pipeline to a triangle! </em></h4>
 
    <div class="nav"
   <li><a href="/">Go back home</a></li>
+  </div>
 </div>
-</div>
-
 
 
 <div class="container">
   <%= yield %>
 </div>
+
+<div class="container-image">
+  <img src="/assets/logo_sfcbc.png" alt="Logo" height="300" width="300">
+</div>
+
+
 
 </body>
 </html>
