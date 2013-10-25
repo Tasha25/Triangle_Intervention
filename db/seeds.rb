@@ -1,6 +1,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Infraction.delete_all
+Connector.delete_all
 
 Infraction.create(code: 'B2', description: 'yelling')
 Infraction.create(code: 'B37', description: 'fighting')
@@ -19,11 +21,11 @@ behavior, see B36)')
 
 Infraction.create(code:'B25', description: 'Bringing unauthorized  persons to  school  or  allowing  unauthorized visitors to enter school in violation of written school rules')
 
-Infraction.create(code: 'B26', description:  '*Engaging  in  gang-related  behavior  (e.g., wearing or displaying gang apparel and/or accessories, writing graffiti**, making  gestures  or  signs')
+Infraction.create(code: 'B26', description:  'Engaging  in  gang-related  behavior  (e.g., wearing or displaying gang apparel and/or accessories, writing graffiti**, making  gestures  or  signs')
 
 Infraction.create(code: 'B27', description: 'Tampering with, changing or altering a record or document of a school by any method, including, but not limited to, computer access or other electronic means')
 
-Infraction.create(code: 'B28'  description: '**Engaging in  vandalism,  graffiti  or  other intentional damage  to  school property or property belonging to staff, students or others B29  Knowingly  possessing  property  belonging to  another without
+Infraction.create(code: 'B28',  description: 'Engaging in  vandalism,  graffiti  or  other intentional damage  to  school property or property belonging to staff, students or others B29  Knowingly  possessing  property  belonging to  another without
 authorization')
 
 Connector.create(
@@ -89,7 +91,7 @@ Connector.create(
 
 Connector.create(
   organization_name: 'Boys and Girls Club',
-  organization_mission: 'The mission of the Boys and Girls Club is to make sure each child feels special.'
+  organization_mission: 'The mission of the Boys and Girls Club is to make sure each child feels special.',
   street_address: '928 Simpson Street',
   city: 'Bronx',
   state: 'NY',
