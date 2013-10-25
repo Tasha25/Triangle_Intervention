@@ -21,11 +21,11 @@ behavior, see B36)')
 
 Infraction.create(code:'B25', description: 'Bringing unauthorized  persons to  school  or  allowing  unauthorized visitors to enter school in violation of written school rules')
 
-Infraction.create(code: 'B26', description:  'Engaging  in  gang-related  behavior  (e.g., wearing or displaying gang apparel and/or accessories, writing graffiti**, making  gestures  or  signs')
+Infraction.create(code:'B26', description:  'Engaging  in  gang-related  behavior  (e.g., wearing or displaying gang apparel and/or accessories, writing graffiti, making  gestures  or  signs')
 
-Infraction.create(code: 'B27', description: 'Tampering with, changing or altering a record or document of a school by any method, including, but not limited to, computer access or other electronic means')
+Infraction.create(code:'B27', description: 'Tampering with, changing or altering a record or document of a school by any method, including, but not limited to, computer access or other electronic means')
 
-Infraction.create(code: 'B28',  description: 'Engaging in  vandalism,  graffiti  or  other intentional damage  to  school property or property belonging to staff, students or others B29  Knowingly  possessing  property  belonging to  another without
+Infraction.create(code: 'B28', description: 'Engaging in  vandalism,  graffiti  or  other intentional damage  to  school property or property belonging to staff, students or others B29  Knowingly  possessing  property  belonging to  another without
 authorization')
 
 Connector.create(
