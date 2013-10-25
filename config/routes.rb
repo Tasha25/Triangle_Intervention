@@ -1,6 +1,6 @@
 FamilySchool::Application.routes.draw do
 
- get '/' => "users#new"
+ get '/' => "users#index"
 
  get '/signup' => "users#new"
   get '/login' => 'session#new'

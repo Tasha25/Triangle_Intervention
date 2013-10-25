@@ -2,18 +2,23 @@
 <h1> Student Name: <%= "#{@student.first_name}" %> </h1>
 </br>
 
-<div>
+<div class="login">
+  <h1> List of Infractions </h1>
+ <table class="infraction-table">
 <% @infractions.each do |infraction| %>
-<ul>
-  <li><%= infraction.code %>, <%= infraction.description %></li>
-</ul>
+<tr>
+  <td><%= infraction.code %></td> <td><%= infraction.description %></td>
+</tr>
 <%end  %>
+</table>
+
+</div>
 
 
-<div>
-  <h1>Form for an Incident</h1>
+<div class="signup">
+  <h1>Create a New Incident</h1>
   <%= form_for([@user, @student, @incident]) do |f| %>
-    Please select an infraction code
+    Please select an infraction code</br>
     <!-- infraction code select box with dropdown options -->
     <%= f.select "infraction_id", options_from_collection_for_select(Infraction.all, "id", "code") %></br>
     <%= f.label :comment%>

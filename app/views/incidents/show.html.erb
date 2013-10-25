@@ -1,37 +1,24 @@
-
-</br>
-
-<div class="login">
-The student <%= "#{@student.first_name}" %> commited a:
-
-<%= @incident.infraction.code %>
-
-which is
-<%= @incident.infraction.description %>
-<div>
-
-<ul>
-<li> Dean's comment: <%= @incident.comment.capitalize %> </li>
-
-This incident was created: <%= @incident.created_at.strftime("%d %b. %Y") %>
-</ul>
-
-
-</div>
-
-</br>
-
-The resources that you can use to help <%= "#{@student.first_name}" %> are: </br>
-
-<div>
-<% @connectors.each do |connector| %>
-<ul>
-  <li><%= connector.organization_name  %></li>
-  <li> <%= connector.organization_mission %></li>
-<ul>
-<%end  %>
-
-</div>
+<div class="resources-info">
+  <p>The student <%= "#{@student.first_name}" %> commited a:
+    <%= @incident.infraction.code %>
+    which is <%= @incident.infraction.description %></p>
+  <div>
+    <h2>Dean's comment:</h2>
+    <p><%= @incident.comment.capitalize %></p>
+    <small>This incident was created: <%= @incident.created_at.strftime("%d %b. %Y") %></small>
+  </div>
+  <hr>
+  <div>
+    <h2>The resources that you can use to help <%= "#{@student.first_name}" %> are: </br></h2>
+    <ul>
+    <% @connectors.each do |connector| %>
+      <li>
+        <h3><%= connector.organization_name  %></h3>
+        <p><%= connector.organization_mission %></p>
+      </li>
+    <% end %>
+    </ul>
+  </div>
 
 </div>
 

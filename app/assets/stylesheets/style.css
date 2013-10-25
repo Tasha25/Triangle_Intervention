@@ -1,14 +1,24 @@
 body{
-  font-family :  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: gray;
+}
+.nav{
+float :right;
 }
 
 p {
-  font-size:25px;
+  font-size: 25px;
   line-height: 1.5;
 }
 
+p span{
+  font-size: 40px;
+
+}
+
+
 .container {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   background-image: url("logo_sfcbc.png");
   background-repeat: no-repeat;
@@ -36,17 +46,18 @@ p {
   font-size: 30px;
   }
 
-.login, .student .add_student_new{
+.login, .student, .add_student_new, .wrapper{
   border: 1px solid black;
   padding: 20px;
   width: 500px;
+  border-radius: 5px;
 }
 
 .login h1 {
   margin-top: 0px
   }
 
-.signup, .find {
+.signup, .add_infraction {
   margin-top: 50px;
   border: 1px solid black;
   padding: 20px;
@@ -68,7 +79,23 @@ p {
   width: 400px;
 }
 
+.infraction-table {
+  width: 100%;
+}
 
 /*ul, li {
   list-style-type: none;
 }*/
+
+.resources-info {
+  border: 1px solid black;
+  padding: 20px;
+  width: 795px;
+  border-radius: 5px;
+}
+
+.resources-info small {
+  font-size: 90%;
+  text-align: right;
+  display: block;
+}
